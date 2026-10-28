@@ -29,6 +29,23 @@ Collects medicine shortage data from the official public sources of five Europea
 
 ---
 
+## Sample output
+
+Real output from earlier runs, trimmed to 20 rows each:
+
+- [samples/finland_sample.csv](samples/finland_sample.csv), from a run in July 2025
+- [samples/netherlands_sample.csv](samples/netherlands_sample.csv), from a run in June 2025
+
+| Country | Molecule | Product | Manufacturer | Status | Expected end |
+| --- | --- | --- | --- | --- | --- |
+| Finland | Riociguat | Adempas 2.5 mg | Abacus Medicine A/S | Shortage ongoing | 15/08/2025 |
+| Finland | Ambrisentan | Ambrisentan Accord 10 mg | Paranova Oy | Shortage ongoing | 31/08/2025 |
+| Netherlands | Tranylcypromine | Tranylcypromine 10mg tablet, 90 pack | Milstein Cv | Not known (*onbekend*) | Not known |
+
+Personal contact details (names, phone numbers, emails) that the Finnish source includes in its comments have been removed from the sample. A fresh run gives current data, and its format may differ slightly from these older files.
+
+---
+
 ## Quick start
 
 Requires Python 3.10+.
@@ -69,6 +86,7 @@ web-scraping-automation-portfolio
 │       ├── netherlands_scraper.py
 │       ├── spain_scraper.py
 │       └── portugal_scraper.py
+├── samples                     # 20-row extracts of real output
 ├── requirements.txt
 ├── LICENSE
 └── README.md
