@@ -1,14 +1,12 @@
-# Web Scraping & Data Extraction Portfolio
+# EU Drug Shortage Monitor
 
-Python | Playwright | Requests | BeautifulSoup | pandas
+Python | pandas | Playwright | Requests | BeautifulSoup
 
-Real-world scrapers that turn public websites into clean, structured datasets. Each project handles a different scraping challenge: static HTML, JavaScript-rendered pages, hidden JSON endpoints, pagination and messy date formats.
+Collects official medicine-shortage data from five European regulators and normalises it into one shared format, so the countries can be compared side by side. Each source needs a different technique: a public API, JSON behind a search page, static HTML, a list that only loads as you scroll, and a paginated form.
 
 ---
 
-## Project 1: European drug shortage monitor
-
-Collects medicine shortage data from the official public sources of five European countries and exports it in one shared format, so the countries can be compared side by side.
+## Sources
 
 | Country | Source | Technique |
 | --- | --- | --- |
@@ -51,8 +49,8 @@ Personal contact details (names, phone numbers, emails) that the Finnish source 
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/abdullahsohailcs/web-scraping-automation-portfolio.git
-cd web-scraping-automation-portfolio
+git clone https://github.com/abdullahsohailcs/eu-drug-shortage-monitor.git
+cd eu-drug-shortage-monitor
 pip install -r requirements.txt
 playwright install chromium
 ```
@@ -77,7 +75,7 @@ Each run writes a dated file to `healthcare/drug_shortage_eu/output/`, for examp
 ## Repository structure
 
 ```
-web-scraping-automation-portfolio
+eu-drug-shortage-monitor
 ├── healthcare
 │   └── drug_shortage_eu
 │       ├── config.py               # shared settings: output folder, request delay
@@ -100,13 +98,6 @@ web-scraping-automation-portfolio
 - Requests are spaced out (`REQUEST_DELAY`) to keep the load on these sites low.
 - Check each site's terms of use before running these scrapers, and don't use the output in ways those terms or local law don't allow.
 - Websites change. If a scraper stops working, the site's layout has probably changed and the selectors need updating.
-
----
-
-## Coming next
-
-- E-commerce price monitoring
-- Job listings aggregation
 
 ---
 
